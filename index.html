@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GlowUp Cosmetics - Beauty Made Easy</title>
+  <meta name="description" content="Discover premium makeup products designed to enhance your natural beauty. Shop now at GlowUp Cosmetics.">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: url('https://i.pinimg.com/736x/e7/47/8b/e7478b2b186ad96baeedc1d97dc24ed2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #220316;
+    }
+
+    header {
+      background: #e77da1;
+      color: #040001;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav button {
+      background: #040000;
+      color: #e91e63;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      margin: 0 0.5rem;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section {
+      display: none;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .card {
+      background: #c5bdc278;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.905);
+      margin-bottom: 1rem;
+    }
+
+    form {
+      background: #c5bdc278;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.905);
+    }
+
+    form label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #181515;
+      border-radius: 5px;
+    }
+
+    form button {
+      margin-top: 1rem;
+      background: #fb709e;
+      color: #0b0407;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #e77da1;
+      color: #0f0202;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    footer a {
+      color: #080003;
+      margin: 0 0.5rem;
+    }
+
+    @media(max-width: 768px) {
+      nav button {
+        margin: 0.3rem 0;
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GlowUp Cosmetics</h1>
+    <p>Unleash Your Inner Glow with Our Premium Makeup Collection</p>
+    <nav>
+      <button onclick="showSection('features')">Home</button>
+      <button onclick="showSection('testimonials')">Testimonials</button>
+      <button onclick="showSection('signup')">Join Now</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Product Description -->
+    <section id="features" class="section active">
+        <div class="card" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+          <div>
+            <h2>Long-Lasting Lipsticks</h2>
+            <p>Enjoy vibrant colors and all-day wear with our cruelty-free lipstick line.</p>
+          </div>
+          <img src="https://i.pinimg.com/736x/1a/31/3a/1a313a6c209f29ffa2950870fbbfddcb.jpg" alt="GlowUp Product 1" style="width: 150px; border-radius: 5px;">
+        </div>
+      
+        <div class="card" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+          <div>
+            <h2>Flawless Foundation</h2>
+            <p>Get smooth, natural coverage for all skin types and tones.</p>
+          </div>
+          <img src="https://i.pinimg.com/736x/c0/9b/ea/c09bea5e747ca7d24700609edf5b8ffe.jpg" alt="GlowUp Product 2" style="width: 150px; border-radius: 5px;">
+        </div>
+      
+        <div class="card" style="display: flex; align-items: center; justify-content: space-between; gap: 1rem;">
+          <div>
+            <h2>Bold Eye Shadows</h2>
+            <p>Stand out with our richly pigmented and blendable eye shadow palettes.</p>
+          </div>
+          <img src="https://i.pinimg.com/736x/fb/9c/5c/fb9c5cfc99d9d792b8102fc444e31b8d.jpg" alt="GlowUp Product 3" style="width: 150px; border-radius: 5px;">
+        </div>
+      </section>
+      
+    <!-- Testimonials -->
+    <section id="testimonials" class="section">
+      <div class="card">
+        <blockquote>"Their lipsticks are a must-have in my beauty bag. So smooth and lasting!"</blockquote>
+        <p>- Ava</p>
+      </div>
+      <div class="card">
+        <blockquote>"I finally found a foundation that matches my skin perfectly. Thank you GlowUp!"</blockquote>
+        <p>- Mia</p>
+      </div>
+      <div class="card">
+        <blockquote>"I've tried countless foundations, but GlowUp's is a game-changer. It blends flawlessly, feels weightless, and gives me a radiant finish that lasts all day—no touch-ups needed!"</blockquote>
+        <p>- Isabella</p>
+      </div>
+
+    </section>
+
+    <!-- Sign-Up Form -->
+    <section id="signup" class="section">
+      <form method="POST" action="submit.php">
+        <h2>Join Our Beauty Community</h2>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Use</a>
+    </p>
+    <p>&copy; 2025 GlowUp Cosmetics</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
